@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-sans: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+}
+
+@layer base {
+  h1, .h1 {
+    @apply font-extrabold text-4xl md:text-6xl leading-tight tracking-tight mb-4 font-sans;
+  }
+  h2, .h2 {
+    @apply font-bold text-2xl md:text-4xl leading-snug tracking-tight mb-3 font-sans;
+  }
+  h3, .h3 {
+    @apply font-semibold text-xl md:text-2xl leading-snug tracking-tight mb-2 font-sans;
+  }
+  h4, .h4 {
+    @apply font-semibold text-lg md:text-xl leading-snug tracking-tight mb-2 font-sans;
+  }
+  h5, .h5 {
+    @apply font-medium text-base md:text-lg leading-snug tracking-tight mb-1 font-sans;
+  }
+  h6, .h6 {
+    @apply font-medium text-sm md:text-base leading-snug tracking-tight mb-1 font-sans;
+  }
+  p, .p {
+    @apply text-base md:text-lg leading-relaxed tracking-normal mb-3 font-sans;
+  }
+  span, .span {
+    @apply leading-relaxed tracking-normal font-sans;
+  }
+  a, .a {
+    @apply font-medium underline-offset-2 transition-colors font-sans;
+  }
+  button, .button {
+    @apply font-semibold font-sans;
+  }
+}
+
+@keyframes ship-rock {
+  0%, 100% { transform: translateX(-50%) rotate(-2deg); }
+  50% { transform: translateX(-50%) rotate(2deg); }
+}
+.animate-ship-rock {
+  animation: ship-rock 5s ease-in-out infinite;
+}
+
+@keyframes continuous-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.compliance-slider-track {
+  display: flex;
+  width: 200%; /* Double the width for seamless looping */
+  animation: continuous-slide 40s linear infinite;
+}
