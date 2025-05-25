@@ -38,7 +38,7 @@ export default function HeroSection() {
           <span className="text-brand-teal">Maritime </span>
           <span className="text-brand-darkblue">Solutions</span>
         </h2>
-        <p className="text-base sm:text-lg md:text-xl max-w-2xl mt-2" data-aos="fade-up" data-aos-delay="300">
+        <p className="text-base sm:text-base md:text-lg text-gray-700 max-w-2xl mt-2" data-aos="fade-up" data-aos-delay="300">
           <span className="text-brand-darkblue">Delivering </span>
           <span className="text-brand-teal">innovative</span>
           <span className="text-brand-darkblue">, safe, and </span>
@@ -51,15 +51,15 @@ export default function HeroSection() {
       <div className="relative z-20 flex flex-col md:flex-row gap-4 md:gap-6 mt-6 mb-2 w-full max-w-4xl justify-center items-center">
         <div className="bg-white rounded-2xl shadow-xl border border-brand-lightgrey/30 p-4 sm:p-6 flex-1 min-w-[180px] md:min-w-[220px] hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
           <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-darkblue mb-2">Modern Fleet</h3>
-          <p className="text-sm sm:text-base md:text-lg text-gray-700">State-of-the-art vessels equipped for safety, efficiency, and reliability in all operations.</p>
+          <p className="text-base sm:text-base md:text-lg text-gray-700">State-of-the-art vessels equipped for safety, efficiency, and reliability in all operations.</p>
         </div>
         <div className="bg-white rounded-2xl shadow-xl border border-brand-lightgrey/30 p-4 sm:p-6 flex-1 min-w-[180px] md:min-w-[220px] hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
           <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-darkblue mb-2">Expert Crew</h3>
-          <p className="text-sm sm:text-base md:text-lg text-gray-700">Highly trained professionals dedicated to delivering superior maritime solutions.</p>
+          <p className="text-base sm:text-base md:text-lg text-gray-700">Highly trained professionals dedicated to delivering superior maritime solutions.</p>
         </div>
         <div className="bg-white rounded-2xl shadow-xl border border-brand-lightgrey/30 p-4 sm:p-6 flex-1 min-w-[180px] md:min-w-[220px] hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
           <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-darkblue mb-2">Global Standards</h3>
-          <p className="text-sm sm:text-base md:text-lg text-gray-700">Compliance with international regulations and best practices for your peace of mind.</p>
+          <p className="text-base sm:text-base md:text-lg text-gray-700">Compliance with international regulations and best practices for your peace of mind.</p>
         </div>
       </div>
       {/* Ship image with rocking animation, perfectly centered and responsive, overlaps slider */}
