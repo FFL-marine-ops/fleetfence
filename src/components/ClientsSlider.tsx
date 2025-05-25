@@ -18,11 +18,11 @@ export default function ClientsSlider() {
   return (
     <section className="w-full bg-white py-12 px-4" data-aos="fade-up">
       <div className="max-w-5xl mx-auto mb-6 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4">
           <span className="text-brand-darkblue">CLIENTS &amp; </span>
           <span className="text-brand-teal">PARTNERSHIPS</span>
         </h2>
-        <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+        <p className="text-base sm:text-base md:text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
           FleetFence Limited serves a diverse clientele including offshore oil and gas operators, renewable energy companies, government agencies, and maritime security firms. We prioritize building long-term partnerships based on mutual trust, reliability, and shared commitment to excellence.
         </p>
       </div>

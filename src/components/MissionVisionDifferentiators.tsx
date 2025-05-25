@@ -17,7 +17,7 @@ export function MissionVisionSection() {
               <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-brand-darkblue mb-1">
                 MISSION <span className="text-brand-teal">STATEMENT</span>
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">To deliver innovative maritime solutions that provides superior value to clients with a focus on safety, efficiency and sustainability, within the Nigerian EEZ and throughout the Gulf of Guinea.</p>
+              <p className="text-gray-700 leading-relaxed">To deliver innovative maritime solutions that provides superior value to clients with a focus on safety, efficiency and sustainability, within the Nigerian EEZ and throughout the Gulf of Guinea.</p>
             </div>
           </div>
           <div className="bg-white border border-brand-lightgrey/30 p-3 sm:p-4 rounded-2xl transition-all duration-300 relative" data-aos="fade-up" data-aos-delay="200">
@@ -30,7 +30,7 @@ export function MissionVisionSection() {
               <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-brand-darkblue mb-1">
                 VISION <span className="text-brand-teal">STATEMENT</span>
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">To be the preferred maritime solutions provider in the Gulf of Guinea, based on proven superior service delivery.</p>
+              <p className="text-gray-700 leading-relaxed">To be the preferred maritime solutions provider in the Gulf of Guinea, based on proven superior service delivery.</p>
             </div>
           </div>
         </div>

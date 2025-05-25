@@ -26,14 +26,14 @@ export default function ComplianceSection() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center">
         {/* Text Section */}
         <div className="flex-1 mb-6 md:mb-0 md:mr-8">
-          <h2 className="text-2xl font-bold text-brand-darkblue mb-4">COMPLIANCE</h2>
-          <p className="text-gray-700 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-darkblue mb-4">COMPLIANCE</h2>
+          <p className="text-base sm:text-base md:text-lg text-gray-700 mb-4">
             We are currently registered with the NIMASA and NUPRC among others to provide maritime solutions within the Nigerian EEZ. Our strategic collaboration with key players throughout the Gulf of Guinea ensures that we can also operate in this region.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className="text-base sm:text-base md:text-lg text-gray-700 mb-4">
             We ensure that all our security personnel, both shoreside and currently servicing Nigerian Navy crew deployed onboard, operate professionally and efficiently in line with the requirements of ISO 18788:2015 Security Operations Management to mitigate any risks.
           </p>
-          <p className="text-gray-700">
+          <p className="text-base sm:text-base md:text-lg text-gray-700">
             We operate in line with the standards prescribed by the International Maritime Organization (IMO), Flag State Law of Nigeria, International Code for the Security of Ships and of Port Facilities (ISPS) and all applicable licensing laws that set the standard for the safety and security in the maritime industry.
           </p>
         </div>
