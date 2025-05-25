@@ -34,7 +34,7 @@ export default function ServicesSection() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white border border-brand-lightgrey/30 p-4 sm:p-6 rounded-2xl">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-semibold text-brand-darkblue">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-brand-darkblue">
               OUR <span className="text-brand-teal">SERVICES</span>
             </h2>
           </div>
@@ -47,10 +47,10 @@ export default function ServicesSection() {
                   </span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-sm font-semibold text-brand-darkblue mb-1">
+                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-brand-darkblue mb-1">
                     {service.title} <span className="text-brand-teal">{service.subtitle}</span>
                   </h3>
-                  <p className="text-sm text-gray-700 leading-relaxed">{service.desc}</p>
+                  <p className="text-lg text-gray-700 leading-relaxed">{service.desc}</p>
                 </div>
               </div>
             ))}
