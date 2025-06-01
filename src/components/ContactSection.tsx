@@ -8,9 +8,8 @@ export default function ContactSection() {
       <div className="w-full max-w-none mx-0">
         <div className="mb-8">
           <div className="bg-white border border-brand-lightgrey/30 shadow px-8 py-4 w-full">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center m-0">
-              <span className="text-brand-darkblue">CONTACT </span>
-              <span className="text-brand-teal">US</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-darkblue text-center m-0">
+              CONTACT US
             </h2>
           </div>
         </div>
