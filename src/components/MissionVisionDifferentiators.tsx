@@ -1,10 +1,11 @@
+import React from 'react';
 import GradientSection from "./GradientSection";
 import { FaShip, FaShieldAlt, FaHandshake, FaLightbulb, FaArrowRight } from "react-icons/fa";
 import { GiLighthouse, GiWorld } from "react-icons/gi";
 import Image from "next/image";
 
 interface Differentiator {
-  icon: JSX.Element;
+  icon: React.ReactElement;
   title: string;
   subtitle: string;
   desc: string;
