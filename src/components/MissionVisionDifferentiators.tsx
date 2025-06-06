@@ -3,6 +3,14 @@ import { FaShip, FaShieldAlt, FaHandshake, FaLightbulb, FaArrowRight } from "rea
 import { GiLighthouse, GiWorld } from "react-icons/gi";
 import Image from "next/image";
 
+interface Differentiator {
+  icon: JSX.Element;
+  title: string;
+  subtitle: string;
+  desc: string;
+  img: string;
+}
+
 export function MissionVisionSection() {
   return (
     <GradientSection className="py-6 px-6 sm:px-8 md:px-10 lg:px-8 xl:px-12" data-aos="fade-up">
@@ -88,7 +96,7 @@ export function KeyDifferentiatorsSection() {
   );
 }
 
-function DifferentiatorCard({ differentiator, delay, className = "" }: { differentiator: any; delay: number; className?: string }) {
+function DifferentiatorCard({ differentiator, delay, className = "" }: { differentiator: Differentiator; delay: number; className?: string }) {
   return (
     <div
       className={`group relative rounded-2xl overflow-hidden shadow-lg bg-white border border-brand-lightgrey/30 w-full min-w-0 min-h-[340px] flex flex-col justify-end cursor-pointer transition-all duration-300 hover:scale-105 group-hover:h-auto ${className}`}

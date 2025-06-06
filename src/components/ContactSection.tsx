@@ -42,7 +42,7 @@ export default function ContactSection() {
       } else {
         throw new Error(data.error || 'Failed to send message');
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: 'error',
         message: 'Failed to send message. Please try again later.'

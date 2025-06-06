@@ -2,6 +2,13 @@ import GradientSection from "./GradientSection";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 
+interface Service {
+  title: string;
+  subtitle: string;
+  desc: string;
+  img: string;
+}
+
 const services = [
   {
     title: "INSHORE",
@@ -48,7 +55,7 @@ export default function ServicesSection() {
   );
 }
 
-function ServiceCard({ service, delay, className = "" }: { service: any; delay: number; className?: string }) {
+function ServiceCard({ service, delay, className = "" }: { service: Service; delay: number; className?: string }) {
   return (
     <div
       className={`group relative rounded-2xl overflow-hidden shadow-lg bg-white border border-brand-lightgrey/30 w-full min-h-[340px] flex flex-col justify-end cursor-pointer transition-all duration-300 hover:scale-105 group-hover:h-auto ${className}`}
