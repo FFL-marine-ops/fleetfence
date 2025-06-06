@@ -1,4 +1,5 @@
 import HeroSection from "../components/HeroSection";
+import ShipOverlapSection from "../components/ShipOverlapSection";
 import ComplianceSlider from "../components/ComplianceSlider";
 import AboutSection from "../components/AboutSection";
 import ServicesSection from "../components/ServicesSection";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <ShipOverlapSection />
       <ComplianceSlider />
       <MissionVisionSection />
       <KeyDifferentiatorsSection />

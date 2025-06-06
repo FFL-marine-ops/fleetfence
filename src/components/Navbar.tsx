@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -7,7 +8,13 @@ export default function Navbar() {
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <div className="flex items-center gap-2">
-          <span className="font-bold text-xl text-brand-darkblue">FleetFence</span>
+          <Image
+            src="/FF-MainLogo.png"
+            alt="FleetFence Logo"
+            width={600}
+            height={200}
+            className="h-40 w-auto -mt-12 -mb-12"
+          />
         </div>
         <div className="hidden md:flex gap-8">
           <a href="#" className="text-brand-darkblue hover:text-brand-blueshade transition-colors">Home</a>
@@ -26,9 +33,9 @@ export default function Navbar() {
           ) : (
             // Hamburger icon
             <>
-              <span className="w-6 h-0.5 bg-brand-darkblue"></span>
-              <span className="w-6 h-0.5 bg-brand-darkblue"></span>
-              <span className="w-6 h-0.5 bg-brand-darkblue"></span>
+          <span className="w-6 h-0.5 bg-brand-darkblue"></span>
+          <span className="w-6 h-0.5 bg-brand-darkblue"></span>
+          <span className="w-6 h-0.5 bg-brand-darkblue"></span>
             </>
           )}
         </button>

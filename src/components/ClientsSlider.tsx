@@ -16,7 +16,7 @@ const clients = [
 
 export default function ClientsSlider() {
   return (
-    <section className="w-full bg-white py-12 px-4" data-aos="fade-up">
+    <section className="w-full bg-white py-12 px-6 sm:px-8 md:px-10 lg:px-8 xl:px-12" data-aos="fade-up">
       <div className="max-w-5xl mx-auto mb-6 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-darkblue mb-2 md:mb-4">
           CLIENTS & PARTNERSHIPS

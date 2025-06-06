@@ -26,7 +26,7 @@ export default function ComplianceSlider() {
   const loopedCompliance = [...compliance, ...compliance];
 
   return (
-    <div className="relative mt-24" data-aos="fade-up">
+    <div className="relative mt-8 px-6 sm:px-8 md:px-10 lg:px-8 xl:px-12" data-aos="fade-up">
       <div className="w-full overflow-hidden bg-white/50 backdrop-blur-sm py-12">
         {/* Gradient Overlays */}
         <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-10" />

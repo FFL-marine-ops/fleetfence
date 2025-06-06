@@ -6,14 +6,14 @@ import "aos/dist/aos.css";
 
 const HERO_VARIANTS = [
   {
-    bg: "/heroBgLP.jpg",
+    bg: "/BgHero32.png",
     headline: "Fleet Fence Limited",
     subheadline: "Sailing Security, Riding on Waves of Reliability",
     tagline: "Delivering innovative, safe, and efficient support to the Oil & Gas and Shipping industries in the Gulf of Guinea.",
     logo: "/fleetfence-logo.png",
   },
   {
-    bg: "/heroBgOne.jpg",
+    bg: "/BgHero33.png",
     headline: "Integrated Maritime Solutions",
     subheadline: "Modern Fleet, Global Standards",
     tagline: "Your trusted partner for maritime security and operational excellence in the Gulf of Guinea.",
@@ -39,16 +39,14 @@ export default function HeroSection() {
   }, []);
   const hero = HERO_VARIANTS[active];
   return (
-    <section className="relative w-full flex flex-col items-center justify-center bg-white text-blue-800 -mb-20 pt-8 pb-40 min-h-[750px] px-0">
+    <section className="relative w-full flex flex-col items-center justify-center bg-white text-blue-800 min-h-screen pb-16 overflow-hidden">
       {/* Responsive Background Image with Soft Zoom */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
         <Image
           src={hero.bg}
           alt="Hero Background"
           fill
-          className={`w-full h-full transition-transform duration-[3000ms] ease-in-out animate-hero-zoom
-            object-cover md:object-cover sm:object-cover object-contain
-          `}
+          className={`w-full h-full transition-transform duration-[3000ms] ease-in-out animate-hero-zoom object-cover`}
           style={{ zIndex: 1 }}
           priority
         />
@@ -87,17 +85,6 @@ export default function HeroSection() {
           <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-darkblue mb-2">Global Standards</h3>
           <p className="text-base sm:text-base md:text-lg text-gray-700">Compliance with international regulations and best practices for your peace of mind.</p>
         </div>
-      </div>
-      {/* Ship image with rocking animation, perfectly centered and responsive, overlaps slider */}
-      <div className="absolute right-0 bottom-[-30px] md:bottom-[-40px] z-[999] w-[60vw] max-w-[500px] min-w-[120px] pr-8 md:pr-16 pointer-events-none" data-aos="fade-left" data-aos-delay="400">
-        <Image
-          src="/hero-vessel.png"
-          alt="Hero Vessel"
-          width={500}
-          height={250}
-          className="animate-ship-rock w-full"
-          priority
-        />
       </div>
       <style jsx global>{`
         @keyframes hero-zoom {

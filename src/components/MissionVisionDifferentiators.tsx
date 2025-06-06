@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function MissionVisionSection() {
   return (
-    <GradientSection className="py-6" data-aos="fade-up">
+    <GradientSection className="py-6 px-6 sm:px-8 md:px-10 lg:px-8 xl:px-12" data-aos="fade-up">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           <div className="bg-white border border-brand-lightgrey/30 p-3 sm:p-4 rounded-2xl transition-all duration-300 relative" data-aos="fade-up" data-aos-delay="100">
@@ -45,56 +45,60 @@ const differentiators = [
     icon: <FaShieldAlt size={32} />,
     title: 'SAFETY',
     subtitle: 'AND COMPLIANCE',
-    desc: 'Stringent adherence to international safety standards and regulatory requirements, ensuring operations are conducted with the highest level of safety and environmental responsibility.'
+    desc: 'Stringent adherence to international safety standards and regulatory requirements, ensuring operations are conducted with the highest level of safety and environmental responsibility.',
+    img: '/differentiator-safety.png',
   },
   {
     icon: <GiWorld size={32} />,
     title: 'GULF',
     subtitle: 'REACH',
-    desc: 'Strategic partnerships and operational capability to support maritime operations across the GoG HRA, facilitating seamless operations in diverse naval, maritime and political environments.'
+    desc: 'Strategic partnerships and operational capability to support maritime operations across the GoG HRA, facilitating seamless operations in diverse naval, maritime and political environments.',
+    img: '/differentiator-gulf-reach.jpg',
   },
   {
     icon: <FaHandshake size={32} />,
     title: 'CUSTOMER',
     subtitle: 'CENTRIC',
-    desc: 'Dedicated to understanding and meeting the unique needs of each client through personalized service solutions and responsive shoreside support.'
+    desc: 'Dedicated to understanding and meeting the unique needs of each client through personalized service solutions and responsive shoreside support.',
+    img: '/differentiator-customer.png',
   },
   {
     icon: <FaLightbulb size={32} />,
     title: 'INNOVATION',
     subtitle: 'DRIVEN',
-    desc: 'Continuous investment in technological advancements and modernization to enhance efficiency, reliability, and sustainability of services.'
+    desc: 'Continuous investment in technological advancements and modernization to enhance efficiency, reliability, and sustainability of services.',
+    img: '/differentiator-innovation.jpg',
   },
 ];
 
 export function KeyDifferentiatorsSection() {
   return (
-    <section className="py-6 bg-white" data-aos="fade-up">
-      <div className="max-w-full lg:max-w-full mx-auto px-2 sm:px-4 lg:px-8">
+    <div className="py-6 bg-white px-4 sm:px-6 md:px-8 lg:px-10" data-aos="fade-up">
+      <div className="max-w-full mx-auto">
         <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-brand-darkblue mb-4">
-          KEY <span className="text-brand-teal">DIFFERENTIATORS</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            KEY <span className="text-brand-teal">DIFFERENTIATORS</span>
+          </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {differentiators.map((item, idx) => (
-            <DifferentiatorCard key={item.title} differentiator={item} delay={100 + idx * 100} className="w-full max-w-none" />
+            <DifferentiatorCard key={item.title} differentiator={item} delay={100 + idx * 100} className="w-full" />
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
 function DifferentiatorCard({ differentiator, delay, className = "" }: { differentiator: any; delay: number; className?: string }) {
   return (
     <div
-      className={`group relative rounded-2xl overflow-hidden shadow-lg bg-white border border-brand-lightgrey/30 min-h-[340px] min-w-[340px] md:min-w-[400px] lg:min-w-[440px] w-full flex flex-col justify-end cursor-pointer transition-all duration-300 hover:scale-105 group-hover:h-auto ${className}`}
+      className={`group relative rounded-2xl overflow-hidden shadow-lg bg-white border border-brand-lightgrey/30 w-full min-w-0 min-h-[340px] flex flex-col justify-end cursor-pointer transition-all duration-300 hover:scale-105 group-hover:h-auto ${className}`}
       style={{ minWidth: 0 }}
       data-aos="fade-up"
       data-aos-delay={delay}
     >
       {/* Card Image */}
       <Image
-        src="/Service 1.jpg"
+        src={differentiator.img}
         alt={differentiator.title}
         fill
         className="object-cover w-full h-full rounded-2xl"

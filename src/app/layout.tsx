@@ -101,7 +101,7 @@ export default function RootLayout({
         <link rel="mask-icon" href="/fleetfence-logo.png" color="#000000" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white overflow-x-hidden`}
       >
         <Navbar />
         <main className="pt-20 bg-white">{children}</main>

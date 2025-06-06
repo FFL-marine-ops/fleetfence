@@ -1,7 +1,7 @@
 export default function MapSection() {
   return (
     <div className="relative z-20" style={{ marginTop: '-45px' }} data-aos="fade-up">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-10 lg:px-8 xl:px-12">
         <div className="bg-white border border-brand-lightgrey/30 p-4 pt-16 rounded-2xl shadow-2xl">
           <div className="w-full h-[400px] rounded-lg overflow-hidden">
             <iframe

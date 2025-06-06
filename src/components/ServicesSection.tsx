@@ -7,37 +7,41 @@ const services = [
     title: "INSHORE",
     subtitle: "SUPPORT VESSELS",
     desc: "We provide all types of light marine vessels to support maritime operations within the coastal waters. Our inshore marine crafts support crew transfers, secure personnel accommodations, light cargo transfers and medical evacuation in the swamps. From Dumb barges, House Boats, Surfer boats, Ambulance boats, Push Tugs, etc.",
+    img: "/inshore-support-vessel.png",
   },
   {
     title: "OFFSHORE",
     subtitle: "SUPPORT VESSELS",
     desc: "We provide all classes of seagoing marine vessels to support maritime operations offshore. These vessels support Drilling rigs and Production platforms, FSOs, and other types of static and dynamic Oil & Gas assets beyond the coast. From PSVs and AHTs with DP capabilities to Jack Up barges, Crane and Pipelay barges, Dive Support Vessels for Saturation & Air Diving and Shuttle tankers.",
+    img: "/offshore-support-vessel.png",
   },
   {
     title: "SECURITY",
     subtitle: "SERVICES",
     desc: "We provide Threat and Vulnerability assessments, Licenced Armed Guards embarkation, Security vessel escort & surveillance, Security threat deterrence etc., and many more bespoke services that match our clients' specific needs. We utilize innovative technologies and modern fleet to ensure that our clients are truly protected. Our highly trained ex Nigerian Navy personnel supports the deployed naval crew from the shore side, ensuring comprehensive protection against maritime threats including piracy, banditry, unauthorized access, and sabotage.",
+    img: "/security-escort.jpg",
   },
   {
     title: "PROCUREMENT",
     subtitle: "SERVICES",
     desc: "Whether it's first aid kit refills, safety gear, navigational instruments, spare parts, or any other maritime essentials we can procure (that's if it's not currently in our stores), transport and deliver it anywhere within the Gulf of Guinea.",
+    img: "/procurement.jpg",
   },
 ];
 
 export default function ServicesSection() {
   return (
     <GradientSection className="py-6" data-aos="fade-up">
-      <div className="max-w-full lg:max-w-full mx-auto px-2 sm:px-4 lg:px-8">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-brand-darkblue">
-            OUR <span className="text-brand-teal">SERVICES</span>
-          </h2>
-        </div>
+      <div className="max-w-full lg:max-w-full mx-auto px-6 sm:px-8 md:px-10 lg:px-8 xl:px-12">
+          <div className="text-center mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-brand-blue">
+              OUR <span className="text-white">SERVICES</span>
+            </h2>
+          </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {services.map((service, idx) => (
+            {services.map((service, idx) => (
             <ServiceCard key={service.title} service={service} delay={100 + idx * 100} className="w-full max-w-none" />
-          ))}
+            ))}
         </div>
       </div>
     </GradientSection>
@@ -47,14 +51,14 @@ export default function ServicesSection() {
 function ServiceCard({ service, delay, className = "" }: { service: any; delay: number; className?: string }) {
   return (
     <div
-      className={`group relative rounded-2xl overflow-hidden shadow-lg bg-white border border-brand-lightgrey/30 min-h-[340px] min-w-[340px] md:min-w-[400px] lg:min-w-[440px] w-full flex flex-col justify-end cursor-pointer transition-all duration-300 hover:scale-105 group-hover:h-auto ${className}`}
+      className={`group relative rounded-2xl overflow-hidden shadow-lg bg-white border border-brand-lightgrey/30 w-full min-h-[340px] flex flex-col justify-end cursor-pointer transition-all duration-300 hover:scale-105 group-hover:h-auto ${className}`}
       style={{ minWidth: 0 }}
       data-aos="fade-up"
       data-aos-delay={delay}
     >
       {/* Card Image */}
       <Image
-        src="/Service 1.jpg"
+        src={service.img}
         alt={service.title}
         fill
         className="object-cover w-full h-full rounded-2xl"

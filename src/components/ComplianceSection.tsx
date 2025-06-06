@@ -22,7 +22,7 @@ const complianceLogos = [
 
 export default function ComplianceSection() {
   return (
-    <section className="w-full bg-white py-12 px-4" data-aos="fade-up">
+    <section className="w-full bg-white py-12 px-6 sm:px-8 md:px-10 lg:px-8 xl:px-12" data-aos="fade-up">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center">
         {/* Text Section */}
         <div className="flex-1 mb-6 md:mb-0 md:mr-8">
