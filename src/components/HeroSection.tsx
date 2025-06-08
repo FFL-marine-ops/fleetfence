@@ -1,45 +1,63 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback, memo } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const HERO_VARIANTS = [
   {
-    bg: "/BgHero32.png",
+    bg: "/BgHero32.webp",
     headline: "Fleet Fence Limited",
     subheadline: "Sailing Security, Riding on Waves of Reliability",
     tagline: "Delivering innovative, safe, and efficient support to the Oil & Gas and Shipping industries in the Gulf of Guinea.",
-    logo: "/fleetfence-logo.png",
+    logo: "/fleetfence-logo.webp",
   },
   {
-    bg: "/BgHero33.png",
+    bg: "/BgHero33.webp",
     headline: "Integrated Maritime Solutions",
     subheadline: "Modern Fleet, Global Standards",
     tagline: "Your trusted partner for maritime security and operational excellence in the Gulf of Guinea.",
-    logo: "/fleetfence-logo.png",
+    logo: "/fleetfence-logo.webp",
   },
 ];
+
+const HeroCard = memo(({ title, description }: { title: string; description: string }) => (
+  <div className="bg-white rounded-2xl shadow-xl border border-brand-lightgrey/30 p-4 sm:p-6 flex-1 min-w-[180px] md:min-w-[220px] max-w-md mx-auto hover:scale-105 transition-transform duration-300" data-aos="fade-up">
+    <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-darkblue mb-2">{title}</h3>
+    <p className="text-base sm:text-base md:text-lg text-gray-700">{description}</p>
+  </div>
+));
+
+HeroCard.displayName = 'HeroCard';
 
 export default function HeroSection() {
   const [active, setActive] = useState(0);
   const [flipping, setFlipping] = useState(false);
+
   useEffect(() => {
-    AOS.init({ once: true, duration: 800 });
+    AOS.init({ 
+      once: true, 
+      duration: 800,
+    });
   }, []);
-  useEffect(() => {
-    const interval = setInterval(() => {
+
+  const changeSlide = useCallback(() => {
       setFlipping(true);
       setTimeout(() => {
         setActive((prev) => (prev + 1) % HERO_VARIANTS.length);
         setFlipping(false);
-      }, 600); // flip duration
-    }, 5000);
-    return () => clearInterval(interval);
+    }, 600);
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(changeSlide, 5000);
+    return () => clearInterval(interval);
+  }, [changeSlide]);
+
   const hero = HERO_VARIANTS[active];
+
   return (
-    <section className="relative w-full flex flex-col items-center justify-center bg-white text-blue-800 min-h-screen pb-16 overflow-hidden">
+    <section className="relative w-full flex flex-col items-center justify-center bg-white text-blue-800 min-h-screen pb-16  overflow-hidden">
       {/* Responsive Background Image with Soft Zoom */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
         <Image
@@ -49,6 +67,8 @@ export default function HeroSection() {
           className={`w-full h-full transition-transform duration-[3000ms] ease-in-out animate-hero-zoom object-cover`}
           style={{ zIndex: 1 }}
           priority
+          loading="eager"
+          sizes="100vw"
         />
         {/* Light glass-like overlay for clarity, image is main focus */}
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/30 via-neutral-800/20 to-neutral-700/10 transition-opacity duration-1000" style={{ zIndex: 2 }} />
@@ -72,19 +92,19 @@ export default function HeroSection() {
         <a href="#contact" className="bg-white/80 text-brand-darkblue px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded font-semibold shadow hover:bg-brand-lightgrey transition mt-4 mb-2 text-base sm:text-lg md:text-xl drop-shadow-md">Request a Quote</a>
       </div>
       {/* Child Cards */}
-      <div className="relative z-20 flex flex-col md:flex-row gap-4 md:gap-6 mt-6 mb-2 w-full max-w-4xl justify-center items-center">
-        <div className="bg-white rounded-2xl shadow-xl border border-brand-lightgrey/30 p-4 sm:p-6 flex-1 min-w-[180px] md:min-w-[220px] max-w-md mx-auto hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
-          <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-darkblue mb-2">Modern Fleet</h3>
-          <p className="text-base sm:text-base md:text-lg text-gray-700">State-of-the-art vessels equipped for safety, efficiency, and reliability in all operations.</p>
-        </div>
-        <div className="bg-white rounded-2xl shadow-xl border border-brand-lightgrey/30 p-4 sm:p-6 flex-1 min-w-[180px] md:min-w-[220px] max-w-md mx-auto hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
-          <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-darkblue mb-2">Expert Crew</h3>
-          <p className="text-base sm:text-base md:text-lg text-gray-700">Highly trained professionals dedicated to delivering superior maritime solutions.</p>
-        </div>
-        <div className="bg-white rounded-2xl shadow-xl border border-brand-lightgrey/30 p-4 sm:p-6 flex-1 min-w-[180px] md:min-w-[220px] max-w-md mx-auto hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
-          <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-darkblue mb-2">Global Standards</h3>
-          <p className="text-base sm:text-base md:text-lg text-gray-700">Compliance with international regulations and best practices for your peace of mind.</p>
-        </div>
+      <div className="relative z-20 flex flex-col md:flex-row gap-6 md:gap-6 mt-6 mb-2 px-6 w-full max-w-4xl justify-center items-center">
+        <HeroCard 
+          title="Modern Fleet" 
+          description="State-of-the-art vessels equipped for safety, efficiency, and reliability in all operations."
+        />
+        <HeroCard 
+          title="Expert Crew" 
+          description="Highly trained professionals dedicated to delivering superior maritime solutions."
+        />
+        <HeroCard 
+          title="Global Standards" 
+          description="Compliance with international regulations and best practices for your peace of mind."
+        />
       </div>
       <style jsx global>{`
         @keyframes hero-zoom {

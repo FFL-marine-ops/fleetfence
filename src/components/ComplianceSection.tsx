@@ -1,23 +1,23 @@
 import Image from "next/image";
 
 const complianceLogos = [
-  { src: "/complianceAgency/NIMASA.jpg", alt: "NIMASA" },
-  { src: "/complianceAgency/NUPRC.jpeg", alt: "NUPRC" },
-  { src: "/complianceAgency/nsitf.png", alt: "NSITF" },
-  { src: "/complianceAgency/ITF.jpeg", alt: "ITF" },
-  { src: "/complianceAgency/Firs.jpeg", alt: "FIRS" },
-  { src: "/complianceAgency/civilDefence.png", alt: "Civil Defence" },
-  { src: "/complianceAgency/dunsBrad.jpg", alt: "Dun & Bradstreet" },
+  { src: "/complianceAgency/NIMASA.webp", alt: "NIMASA" },
+  { src: "/complianceAgency/NUPRC.webp", alt: "NUPRC" },
+  { src: "/complianceAgency/nsitf.webp", alt: "NSITF" },
+  { src: "/complianceAgency/ITF.webp", alt: "ITF" },
+  { src: "/complianceAgency/Firs.webp", alt: "FIRS" },
+  { src: "/complianceAgency/civilDefence.webp", alt: "Civil Defence" },
+  { src: "/complianceAgency/dunsBrad.webp", alt: "Dun & Bradstreet" },
   { src: "/complianceAgency/NNavy.webp", alt: "Nigerian Navy" },
-  { src: "/complianceAgency/nipex.png", alt: "NipeX" },
-  { src: "/complianceAgency/Nmdpra.jpeg", alt: "NMDPRA" },
-  { src: "/complianceAgency/MSP.jpeg", alt: "MSP" },
-  { src: "/complianceAgency/icoca.png", alt: "ICOCA" },
-  { src: "/complianceAgency/shipowners.jpeg", alt: "Shipowners" },
-  { src: "/complianceAgency/iso.png", alt: "ISO" },
-  { src: "/complianceAgency/bimco.jpeg", alt: "BIMCO" },
-  { src: "/complianceAgency/ncdmb.jpeg", alt: "NCDMB" },
-  { src: "/complianceAgency/imca.jpg", alt: "IMCA" },
+  { src: "/complianceAgency/nipex.webp", alt: "NipeX" },
+  { src: "/complianceAgency/Nmdpra.webp", alt: "NMDPRA" },
+  { src: "/complianceAgency/MSP.webp", alt: "MSP" },
+  { src: "/complianceAgency/icoca.webp", alt: "ICOCA" },
+  { src: "/complianceAgency/shipowners.webp", alt: "Shipowners" },
+  { src: "/complianceAgency/iso.webp", alt: "ISO" },
+  { src: "/complianceAgency/bimco.webp", alt: "BIMCO" },
+  { src: "/complianceAgency/ncdmb.webp", alt: "NCDMB" },
+  { src: "/complianceAgency/imca.webp", alt: "IMCA" },
 ];
 
 export default function ComplianceSection() {
@@ -43,7 +43,12 @@ export default function ComplianceSection() {
             <div className="p-4 md:p-6">
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center items-center">
                 {complianceLogos.map((logo, i) => (
-                  <div key={i} className="bg-white rounded-lg shadow flex items-center justify-center h-24 md:h-28 p-2">
+                  <div 
+                    key={i} 
+                    className="bg-white rounded-lg shadow flex items-center justify-center h-24 md:h-28 p-2"
+                    data-aos="fade-up"
+                    data-aos-delay={i * 100}
+                  >
                     <Image src={logo.src} alt={logo.alt} width={80} height={80} className="object-contain max-h-16" />
                   </div>
                 ))}

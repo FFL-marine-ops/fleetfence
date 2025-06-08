@@ -57,11 +57,14 @@ body {
 }
 
 @keyframes ship-rock {
-  0%, 100% { transform: translateX(-50%) rotate(-2deg); }
-  50% { transform: translateX(-50%) rotate(2deg); }
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
 }
+
 .animate-ship-rock {
   animation: ship-rock 5s ease-in-out infinite;
+  will-change: transform;
+  transform-origin: center bottom;
 }
 
 @keyframes continuous-slide {
@@ -72,8 +75,34 @@ body {
     transform: translateX(-50%);
   }
 }
+
 .compliance-slider-track {
   display: flex;
-  width: 200%; /* Double the width for seamless looping */
+  width: 200%;
   animation: continuous-slide 40s linear infinite;
+  will-change: transform;
+}
+
+/* Optimize transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Optimize image loading */
+img {
+  content-visibility: auto;
+}
+
+/* Optimize animations for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-ship-rock,
+  .compliance-slider-track {
+    animation: none;
+  }
+  
+  .transition-all {
+    transition: none;
+  }
 }

@@ -1,28 +1,43 @@
-import React from "react";
+import React, { memo } from "react";
 import Image from "next/image";
 
-export default function ComplianceSlider() {
   const compliance = [
-    { name: "NIMASA", logo: "complianceAgency/NIMASA.jpg" },
-    { name: "NUPRC", logo: "complianceAgency/NUPRC.jpeg" },
-    { name: "NSITF", logo: "complianceAgency/nsitf.png" },
-    { name: "ITF", logo: "complianceAgency/ITF.jpeg" },
-    { name: "FIRS", logo: "complianceAgency/Firs.jpeg" },
-    { name: "Civil Defence", logo: "complianceAgency/civilDefence.png" },
-    { name: "Dun & Bradstreet", logo: "complianceAgency/dunsBrad.jpg" },
+    { name: "NIMASA", logo: "complianceAgency/NIMASA.webp" },
+    { name: "NUPRC", logo: "complianceAgency/NUPRC.webp" },
+    { name: "NSITF", logo: "complianceAgency/nsitf.webp" },
+    { name: "ITF", logo: "complianceAgency/ITF.webp" },
+    { name: "FIRS", logo: "complianceAgency/Firs.webp" },
+    { name: "Civil Defence", logo: "complianceAgency/civilDefence.webp" },
+    { name: "Dun & Bradstreet", logo: "complianceAgency/dunsBrad.webp" },
     { name: "Nigerian Navy", logo: "complianceAgency/NNavy.webp" },
-    { name: "NipeX", logo: "complianceAgency/nipex.png" },
-    { name: "NMDPRA", logo: "complianceAgency/Nmdpra.jpeg" },
-    { name: "MSP", logo: "complianceAgency/MSP.jpeg" },
-    { name: "ICOCA", logo: "complianceAgency/icoca.png" },
-    { name: "Shipowners", logo: "complianceAgency/shipowners.jpeg" },
-    { name: "ISO", logo: "complianceAgency/iso.png" },
-    { name: "BIMCO", logo: "complianceAgency/bimco.jpeg" },
-    { name: "NCDMB", logo: "complianceAgency/ncdmb.jpeg" },
-    { name: "IMCA", logo: "complianceAgency/imca.jpg" },
+    { name: "NipeX", logo: "complianceAgency/nipex.webp" },
+    { name: "NMDPRA", logo: "complianceAgency/Nmdpra.webp" },
+    { name: "MSP", logo: "complianceAgency/MSP.webp" },
+    { name: "ICOCA", logo: "complianceAgency/icoca.webp" },
+    { name: "Shipowners", logo: "complianceAgency/shipowners.webp" },
+    { name: "ISO", logo: "complianceAgency/iso.webp" },
+    { name: "BIMCO", logo: "complianceAgency/bimco.webp" },
+    { name: "NCDMB", logo: "complianceAgency/ncdmb.webp" },
+    { name: "IMCA", logo: "complianceAgency/imca.webp" },
   ];
 
-  // Double the compliance array for a seamless loop
+const ComplianceLogo = memo(({ name, logo }: { name: string; logo: string }) => (
+  <div className="flex-shrink-0 px-4">
+    <Image
+      src={`/${logo}`}
+      alt={name}
+      width={120}
+      height={60}
+      className="h-12 w-auto object-contain"
+      loading="lazy"
+      sizes="(max-width: 640px) 6rem, (max-width: 768px) 7rem, (max-width: 1024px) 8rem, 9rem"
+    />
+  </div>
+));
+
+ComplianceLogo.displayName = 'ComplianceLogo';
+
+export default function ComplianceSlider() {
   const loopedCompliance = [...compliance, ...compliance];
 
   return (
@@ -34,18 +49,11 @@ export default function ComplianceSlider() {
         {/* Sliding Track */}
         <div className="compliance-slider-track">
           {loopedCompliance.map((item, index) => (
-            <div 
+            <ComplianceLogo
               key={`${item.name}-${index}`} 
-              className="flex-none mx-8 sm:mx-12 w-24 sm:w-28 md:w-32 lg:w-36 h-16 sm:h-20 md:h-24 lg:h-28 relative"
-            >
-              <Image
-                src={`/${item.logo}`}
-                alt={`${item.name} logo`}
-                fill
-                className="object-contain"
-                sizes="(max-width: 640px) 6rem, (max-width: 768px) 7rem, (max-width: 1024px) 8rem, 9rem"
+              name={item.name}
+              logo={item.logo}
               />
-            </div>
           ))}
         </div>
       </div>

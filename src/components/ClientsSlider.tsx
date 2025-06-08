@@ -1,17 +1,17 @@
 import Image from "next/image";
 
 const clients = [
-  { src: "/Clients/seaGuardian.png", alt: "Sea Guardian" },
-  { src: "/Clients/generalHydrocarbons.jpeg", alt: "General Hydrocarbons Ltd" },
-  { src: "/Clients/tcoMarine.jpeg", alt: "TCO Marine Limited" },
-  { src: "/Clients/brightWater.png", alt: "Brightwater Energy Solutions" },
-  { src: "/Clients/HabinLimited.jpeg", alt: "Habin Limited" },
-  { src: "/Clients/maersk.png", alt: "Maersk Line" },
-  { src: "/Clients/mariLog.png", alt: "MariLog Limited" },
+  { src: "/Clients/seaGuardian.webp", alt: "Sea Guardian" },
+  { src: "/Clients/generalHydrocarbons.webp", alt: "General Hydrocarbons Ltd" },
+  { src: "/Clients/tcoMarine.webp", alt: "TCO Marine Limited" },
+  { src: "/Clients/brightWater.webp", alt: "Brightwater Energy Solutions" },
+  { src: "/Clients/HabinLimited.webp", alt: "Habin Limited" },
+  { src: "/Clients/maersk.webp", alt: "Maersk Line" },
+  { src: "/Clients/mariLog.webp", alt: "MariLog Limited" },
   { src: "/Clients/DDgrand.webp", alt: "D Grand" },
-  { src: "/Clients/Bricks.png", alt: "Bricks NG" },
-  { src: "/Clients/oceanSafe.jpeg", alt: "Ocean Safe" },
-  { src: "/Clients/temileAndsons.jpeg", alt: "Temile & Sons" },
+  { src: "/Clients/Bricks.webp", alt: "Bricks NG" },
+  { src: "/Clients/oceanSafe.webp", alt: "Ocean Safe" },
+  { src: "/Clients/temileAndsons.webp", alt: "Temile & Sons" },
 ];
 
 export default function ClientsSlider() {

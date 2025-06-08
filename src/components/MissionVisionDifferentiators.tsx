@@ -55,28 +55,28 @@ const differentiators = [
     title: 'SAFETY',
     subtitle: 'AND COMPLIANCE',
     desc: 'Stringent adherence to international safety standards and regulatory requirements, ensuring operations are conducted with the highest level of safety and environmental responsibility.',
-    img: '/differentiator-safety.png',
+    img: '/differentiator-safety.webp',
   },
   {
     icon: <GiWorld size={32} />,
     title: 'GULF',
     subtitle: 'REACH',
     desc: 'Strategic partnerships and operational capability to support maritime operations across the GoG HRA, facilitating seamless operations in diverse naval, maritime and political environments.',
-    img: '/differentiator-gulf-reach.jpg',
+    img: '/differentiator-gulf-reach.webp',
   },
   {
     icon: <FaHandshake size={32} />,
     title: 'CUSTOMER',
     subtitle: 'CENTRIC',
     desc: 'Dedicated to understanding and meeting the unique needs of each client through personalized service solutions and responsive shoreside support.',
-    img: '/differentiator-customer.png',
+    img: '/differentiator-customer.webp',
   },
   {
     icon: <FaLightbulb size={32} />,
     title: 'INNOVATION',
     subtitle: 'DRIVEN',
     desc: 'Continuous investment in technological advancements and modernization to enhance efficiency, reliability, and sustainability of services.',
-    img: '/differentiator-innovation.jpg',
+    img: '/differentiator-innovation.webp',
   },
 ];
 

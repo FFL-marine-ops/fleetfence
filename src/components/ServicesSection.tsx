@@ -14,25 +14,25 @@ const services = [
     title: "INSHORE",
     subtitle: "SUPPORT VESSELS",
     desc: "We provide all types of light marine vessels to support maritime operations within the coastal waters. Our inshore marine crafts support crew transfers, secure personnel accommodations, light cargo transfers and medical evacuation in the swamps. From Dumb barges, House Boats, Surfer boats, Ambulance boats, Push Tugs, etc.",
-    img: "/inshore-support-vessel.png",
+    img: "/inshore-support-vessel.webp",
   },
   {
     title: "OFFSHORE",
     subtitle: "SUPPORT VESSELS",
     desc: "We provide all classes of seagoing marine vessels to support maritime operations offshore. These vessels support Drilling rigs and Production platforms, FSOs, and other types of static and dynamic Oil & Gas assets beyond the coast. From PSVs and AHTs with DP capabilities to Jack Up barges, Crane and Pipelay barges, Dive Support Vessels for Saturation & Air Diving and Shuttle tankers.",
-    img: "/offshore-support-vessel.png",
+    img: "/offshore-support-vessel.webp",
   },
   {
     title: "SECURITY",
     subtitle: "SERVICES",
     desc: "We provide Threat and Vulnerability assessments, Licenced Armed Guards embarkation, Security vessel escort & surveillance, Security threat deterrence etc., and many more bespoke services that match our clients' specific needs. We utilize innovative technologies and modern fleet to ensure that our clients are truly protected. Our highly trained ex Nigerian Navy personnel supports the deployed naval crew from the shore side, ensuring comprehensive protection against maritime threats including piracy, banditry, unauthorized access, and sabotage.",
-    img: "/security-escort.jpg",
+    img: "/security-escort.webp",
   },
   {
     title: "PROCUREMENT",
     subtitle: "SERVICES",
     desc: "Whether it's first aid kit refills, safety gear, navigational instruments, spare parts, or any other maritime essentials we can procure (that's if it's not currently in our stores), transport and deliver it anywhere within the Gulf of Guinea.",
-    img: "/procurement.jpg",
+    img: "/procurement.webp",
   },
 ];
 
