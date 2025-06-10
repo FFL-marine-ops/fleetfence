@@ -89,7 +89,7 @@ export default function HeroSection() {
         <p className="text-lg sm:text-xl md:text-2xl text-white max-w-2xl mt-3 transition-all duration-1000 font-medium tracking-tight text-center" style={{ textShadow: '0 1px 6px #000a' }}>
           {hero.tagline}
         </p>
-        <a href="#contact" className="bg-white/80 text-brand-darkblue px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded font-semibold shadow hover:bg-brand-lightgrey transition mt-4 mb-2 text-base sm:text-lg md:text-xl drop-shadow-md">Request a Quote</a>
+        <a href="#contact-form" className="bg-white/80 text-brand-darkblue px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded font-semibold shadow hover:bg-brand-lightgrey transition mt-4 mb-2 text-base sm:text-lg md:text-xl drop-shadow-md">Request a Quote</a>
       </div>
       {/* Child Cards */}
       <div className="relative z-20 flex flex-col md:flex-row gap-6 md:gap-6 mt-6 mb-2 px-6 w-full max-w-4xl justify-center items-center">

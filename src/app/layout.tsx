@@ -95,10 +95,9 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/fleetfence-logo.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/fleetfence-logo.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/fleetfence-logo.png" />
-        <link rel="mask-icon" href="/fleetfence-logo.png" color="#000000" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="mask-icon" href="/favicon.ico" color="#000000" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}

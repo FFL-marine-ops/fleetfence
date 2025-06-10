@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaLinkedin, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
@@ -12,9 +12,11 @@ export default function Footer() {
             <span className="text-sm sm:text-base md:text-lg text-white max-w-xs">Delivering innovative, safe, and efficient support to the Oil & Gas and Shipping industries in the Gulf of Guinea.</span>
             <div className="flex gap-2 sm:gap-3 text-xl sm:text-2xl mt-2">
               <a href="https://wa.me/2347058268955" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-white hover:text-brand-teal transition"><FaWhatsapp /></a>
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" className="text-white hover:text-brand-teal transition"><FaXTwitter /></a>
+              <a href="https://www.facebook.com/profile.php?id=61576882650927" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white hover:text-brand-teal transition"><FaFacebook /></a>
+              <a href="https://x.com/FleetFenceLtd" target="_blank" rel="noopener noreferrer" aria-label="X" className="text-white hover:text-brand-teal transition"><FaXTwitter /></a>
+              <a href="http://www.youtube.com/@FleetFenceLimited" target="_blank" rel="noopener noreferrer" aria-label="Youtube" className="text-white hover:text-brand-teal transition"><FaYoutube /></a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white hover:text-brand-teal transition"><FaInstagram /></a>
-              <a href="https://www.linkedin.com/company/FleetFence-Limited" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-white hover:text-brand-teal transition"><FaLinkedin /></a>
+              <a href="https://www.linkedin.com/company/fleetfence-limited/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-white hover:text-brand-teal transition"><FaLinkedin /></a>
             </div>
           </div>
           {/* Center: Services and Company */}

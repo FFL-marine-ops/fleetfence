@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import GradientSection from "./GradientSection";
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function ContactSection() {
@@ -62,7 +62,7 @@ export default function ContactSection() {
 
   return (
     <GradientSection className="pt-6 pb-20" data-aos="fade-up">
-      <div className="w-full max-w-none mx-0 px-6 sm:px-8 md:px-10 lg:px-8 xl:px-12">
+      <div id="contact-form" className="w-full max-w-none mx-0 px-6 sm:px-8 md:px-10 lg:px-8 xl:px-12">
         <div className="mb-8">
           <div className="bg-white border border-brand-lightgrey/30 shadow px-8 py-4 w-full">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-darkblue text-center m-0">
@@ -122,9 +122,11 @@ export default function ContactSection() {
               <div className="bg-white border border-brand-lightgrey/30 p-6 rounded-2xl shadow flex flex-col gap-4">
                 <div className="flex justify-center gap-4 sm:gap-6 mb-2 text-xl sm:text-2xl">
                   <a href="https://wa.me/2347058268955" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-brand-darkblue hover:text-brand-teal transition"><FaWhatsapp /></a>
-                  <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" className="text-brand-darkblue hover:text-brand-teal transition"><FaXTwitter /></a>
+                  <a href="https://www.facebook.com/profile.php?id=61576882650927" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-brand-darkblue hover:text-brand-teal transition"><FaFacebook /></a>
+                  <a href="https://x.com/FleetFenceLtd" target="_blank" rel="noopener noreferrer" aria-label="X" className="text-brand-darkblue hover:text-brand-teal transition"><FaXTwitter /></a>
+                  <a href="http://www.youtube.com/@FleetFenceLimited" target="_blank" rel="noopener noreferrer" aria-label="Youtube" className="text-brand-darkblue hover:text-brand-teal transition"><FaYoutube /></a>
                   <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-brand-darkblue hover:text-brand-teal transition"><FaInstagram /></a>
-                  <a href="https://www.linkedin.com/company/FleetFence-Limited" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-brand-darkblue hover:text-brand-teal transition"><FaLinkedin /></a>
+                  <a href="https://www.linkedin.com/company/fleetfence-limited/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-brand-darkblue hover:text-brand-teal transition"><FaLinkedin /></a>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand-darkblue mt-1"><FaEnvelope size={24} /></span>
